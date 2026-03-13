@@ -4,10 +4,10 @@
 
 
 
-venv/               
-*.pyc              
-__pycache__/        
-.env                
-*.xlsx       
-*.log          
-data/processed/*.csv 
+venv/               # Environnement virtuel (à ne jamais versionner)
+*.pyc               # Fichiers compilés Python
+__pycache__/        # Cache Python
+.env                # Variables d'environnement (souvent avec mots de passe)
+*.xlsx              # Fichiers Excel générés
+*.log               # Fichiers de logs
+data/processed/*.csv  # Données nettoyées (très important !)

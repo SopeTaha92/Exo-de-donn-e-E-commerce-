@@ -1,0 +1,9 @@
+2026-03-13 03:25:33 | INFO | src.extract:13 | Début de l'extraction des données brutes
+2026-03-13 03:25:33 | SUCCESS | src.extract:18 | Extraction des données brutes effectués avec succée
+2026-03-13 03:25:33 | INFO | src.clean:11 | Début du néttoyage des données brutes
+2026-03-13 03:25:33 | INFO | src.clean:48 | Néttoyage des données brutes reussi avec succée
+2026-03-13 03:25:33 | INFO | src.features:11 | Début de l'ajout des features
+2026-03-13 03:25:33 | INFO | src.features:20 | Ajout des features réussi avec succée
+2026-03-13 03:25:33 | INFO | src.analysis.analysis_by_category:13 | Début de l'analyse par catégorie
+2026-03-13 03:25:33 | INFO | src.analysis.analysis_by_category:28 | Analyse par catégorie réussi avec succée
+2026-03-13 03:25:33 | INFO | src.repport:11 | Début de la génération du fichier Excel multi-onglets

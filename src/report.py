@@ -5,12 +5,21 @@ import pandas as pd
 from loguru import logger
 from typing import Dict
 
+import config
 
-def reporting_excel(file : str, onglets : Dict[str , pd.DataFrame], min_orange, max_orange, green_value):
+
+def reporting_excel(file : str, onglets : Dict[str , pd.DataFrame]):
     """La fonction qui se charge de la génération des fichiers Excel"""
     with pd.ExcelWriter(file, engine='xlsxwriter') as writer:
         logger.info("Début de la génération du fichier Excel multi-onglets")
         workbook = writer.book
+
+        couleur_excel = config.COULEURS_EXCEL
+        vert = couleur_excel['vert']
+        orange = couleur_excel['orange']
+        rouge = couleur_excel['rouge']
+        hearder = couleur_excel['hearder']
+
         base = {
             'align' : 'center',
             'valign' : 'center',
@@ -22,16 +31,18 @@ def reporting_excel(file : str, onglets : Dict[str , pd.DataFrame], min_orange, 
                 **base,
                 'bold' : True,
                 'italic' : True,
-                'bg_color' : "#5BDA42",
+                'bg_color' : hearder,
                 'font_color' : 'white'
             }
         )
         money_format = workbook.add_format({**base, 'num_format' : '0.00" "€'})
         bonus_format = workbook.add_format({**base, 'num_format' : '0 %'})
 
-        red_format = workbook.add_format({**base, 'bg_color' : '#FFC7CE'})
-        orange_format = workbook.add_format({**base, 'bg_color' : '#FFEB9C'})
-        green_format = workbook.add_format({**base, 'bg_color' : '#13FF3A'})
+        red_format = workbook.add_format({**base, 'bg_color' : rouge})
+        orange_format = workbook.add_format({**base, 'bg_color' : orange})
+        green_format = workbook.add_format({**base, 'bg_color' : vert})
+
+        
 
         for name, data in onglets.items():
             data.to_excel(writer, sheet_name=name, index=False)
@@ -58,25 +69,27 @@ def reporting_excel(file : str, onglets : Dict[str , pd.DataFrame], min_orange, 
 
                 if 'Montant_remise' in data.columns:
                         profit_column = data.columns.get_loc('Montant_remise')
+
+                        seuil_remise = config.EXCEL_FORMATTING['Montant_remise'] #Aprés import de config c'est au tour de mes seuil définit
                         worksheet.conditional_format(1, profit_column, len(data), profit_column, {
                             'type' : 'cell',
                             'criteria' : '<=',
-                            'value' : 0,
+                            'value' : seuil_remise['red_value'],
                             'format' : red_format
                         })
 
                         worksheet.conditional_format(1, profit_column, len(data), profit_column, {
                             'type' : 'cell',
                             'criteria' : 'between',
-                            'minimum' : min_orange, 
-                            'maximum' : max_orange,
+                            'minimum' : seuil_remise['min_orange'], 
+                            'maximum' : seuil_remise['max_orange'],
                             'format' : orange_format
                         })
 
                         worksheet.conditional_format(1, profit_column, len(data), profit_column, {
                             'type' : 'cell',
                             'criteria' : '>',
-                            'value' : green_value,#100000,
+                            'value' : seuil_remise['green_value'],
                             'format' : green_format
                         })
             if name == 'Données Par Catégories':

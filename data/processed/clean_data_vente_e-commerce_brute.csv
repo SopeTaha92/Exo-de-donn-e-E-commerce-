@@ -1,0 +1,11 @@
+order_id,customer_id,customer_name,customer_email,product_id,product_name,category,quantity,unit_price,discount,order_date,shipping_city,status
+ORD-001,CUST-01,Alice Martin,alice@email.com,P-100,Laptop Dell,Electronics,1,899.99,0.0,2024-01-15,Paris,Delivered
+ORD-002,CUST-02,Bob Dupont,bob@email.com,P-200,Iphone 15,Mobile,2,999.99,0.1,2024-01-16,Lyon,Shipped
+ORD-003,CUST-01,Alice Martin,alice@email.com,P-300,Samsung Tablet,Tablet,1,449.99,0.05,2024-01-17,Marseille,Delivered
+ORD-004,CUST-03,Charlie Legrand,charlie@email.com,P-400,Sony Headphones,Audio,3,199.99,0.15,2024-01-18,Lille,Pending
+ORD-005,CUST-04,Diana,diana@email.com,P-500,Macbook Pro,Laptop,1,1299.99,0.0,2024-01-19,Paris,Delivered
+ORD-006,CUST-05,Inconnu,email_manquant@domain.com,P-600,Ipad Air,Tablet,2,599.99,0.2,2024-01-20,Toulouse,Shipped
+ORD-007,CUST-03,Eve,eve@email.com,P-700,Google Pixel,Mobile,1,699.99,0.1,2024-01-21,Bordeaux,Delivered
+ORD-008,CUST-06,Frank,frank@email.com,P-800,Microsoft Surface,Laptop,1,899.99,0.05,2024-01-22,Nice,Pending
+ORD-009,CUST-07,Grace,grace@email.com,P-900,Canon Camera,Camera,1,549.99,0.0,2024-01-23,Strasbourg,Shipped
+ORD-010,CUST-08,Helen,email_manquant@domain.com,P-1000,Nikon Lens,Camera,1,399.99,0.25,2024-01-24,Inconnu,Cancelled

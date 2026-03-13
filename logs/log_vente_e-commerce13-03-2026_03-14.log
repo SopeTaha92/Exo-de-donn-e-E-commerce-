@@ -1,0 +1,6 @@
+2026-03-13 03:14:15 | INFO | src.extract:13 | Début de l'extraction des données brutes
+2026-03-13 03:14:15 | SUCCESS | src.extract:18 | Extraction des données brutes effectués avec succée
+2026-03-13 03:14:15 | INFO | src.clean:11 | Début du néttoyage des données brutes
+2026-03-13 03:14:15 | INFO | src.clean:48 | Néttoyage des données brutes reussi avec succée
+2026-03-13 03:14:15 | INFO | src.features:11 | Début de l'ajout des features
+2026-03-13 03:14:15 | INFO | src.features:18 | Ajout des features réussi avec succée

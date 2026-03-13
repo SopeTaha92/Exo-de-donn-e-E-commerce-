@@ -27,6 +27,26 @@ EXCEL_FILE = BASE_DIR_EXCEL / f"donnée_vente_E-commerce_{TODAY}.xlsx"
 MAX_RETRIES = 3
 DELAY = 1
 
-MIN_ORANGE = 0
+"""MIN_ORANGE = 0
 MAX_ORANGE = 100
-GREEN_VALUE = 100
+GREEN_VALUE = 100"""
+
+
+# Dans config.py, ajoute un dictionnaire ou une section dédiée
+# Paramètres de mise en forme Excel
+EXCEL_FORMATTING = {
+    'Montant_remise': {
+        'min_orange': 0,
+        'max_orange': 100,
+        'green_value': 100,
+        'red_value': 0  # Peut-être utile ?
+    }
+}
+
+# Dans config.py
+COULEURS_EXCEL = {
+    'vert': '#C6EFCE',
+    'rouge': '#FFC7CE',
+    'orange': '#FFEB9C',
+    'hearder': '#5BDA42'
+}

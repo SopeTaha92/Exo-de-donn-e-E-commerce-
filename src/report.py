@@ -93,6 +93,7 @@ def reporting_excel(file : str, onglets : Dict[str , pd.DataFrame]):
                             'format' : green_format
                         })
             if name == 'Données Par Catégories':
+                
 
                 logger.info(f"Début de la création du graphique pour la feuille {name}")
                 chart_col = workbook.add_chart({'type' : 'column'})
@@ -193,3 +194,18 @@ def reporting_excel(file : str, onglets : Dict[str , pd.DataFrame]):
 
 
 
+"""if name == 'Données Par Catégories':
+                    required_cols = ['category', 'Ca_Net', 'quantity']
+                    if all(col in data.columns for col in required_cols):
+                        # Ton code de graphique
+                        pass
+                    else:
+                        logger.warning(f"Colonnes manquantes pour graphique {name}")"""
+
+
+"""# Ajoute une vérification au début
+required_colors = ['vert', 'orange', 'rouge', 'header']
+for color in required_colors:
+    if color not in config.COULEURS_EXCEL:
+        logger.error(f"Couleur manquante dans config: {color}")
+        raise KeyError(f"Config error: missing color '{color}'")"""

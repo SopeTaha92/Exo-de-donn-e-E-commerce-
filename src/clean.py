@@ -20,7 +20,8 @@ def cleanning_brute_data(df_brute : pd.DataFrame, clean_data : str):
 
     df['unit_price'] = (
         df['unit_price']
-        .str.replace('€', '', regex=False)
+        #.str.replace('€', '', regex=False) plus utile car les données viennent avec une erreur d'encodage d'ou la ligne suivante 
+        .str.replace('â\x82¬', '', regex=False)  # Ajoute cette ligne
         .str.replace(' ', '', regex=False)
         .replace('', 0, regex=False)
         .astype(float)

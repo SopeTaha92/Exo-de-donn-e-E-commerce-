@@ -5,7 +5,21 @@ from pathlib import Path
 
 
 BRUTE_DATA_DIR = Path('data/raw')
-BRUTE_DATA_FILE = BRUTE_DATA_DIR / "donnée_vente_e-commerce_brute.csv"
+BRUTE_DATA_FILE_ = BRUTE_DATA_DIR / "donnée_vente_e-commerce_brute.csv"
+BRUTE_DATA_FILE = BRUTE_DATA_DIR / "donnée_vente_e-commerce_brute_depuis_sql.csv"
+
+# Ajout de la configuration d'accée pour la base de donnée
+DB_CONFIG = {
+    'host' : 'localhost',
+    'port' : 5432,
+    'dbname' : 'ecommerce_db',
+    'user' : 'sope',
+    'password' : 'azerty12'
+    #'client_encoding': 'latin1'  # ← Ajoute cette ligne latin1 ou WIN1252 pour voir
+
+}
+# Ajout de la table à extraire 
+TABLE_NAME = 'ventes_auto'
 
 BRUTE_DATA_CLEAN_DIR = Path('data/processed')
 BRUTE_DATA_CLEAN_DIR.mkdir(parents=True, exist_ok=True)

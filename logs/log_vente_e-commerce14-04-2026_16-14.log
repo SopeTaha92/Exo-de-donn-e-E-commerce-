@@ -1,0 +1,41 @@
+2026-04-14 16:14:17 | INFO | src.extract:13 | Début de l'extraction des données depuis PostgreSQL
+2026-04-14 16:14:17 | SUCCESS | src.extract:26 | Extraction réussie : 10 lignes depuis ventes_auto
+2026-04-14 16:14:17 | INFO | src.clean:11 | Début du néttoyage des données brutes
+2026-04-14 16:14:17 | INFO | src.clean:48 | Néttoyage des données brutes reussi avec succée
+2026-04-14 16:14:17 | INFO | src.features:11 | Début de l'ajout des features
+2026-04-14 16:14:17 | INFO | src.features:20 | Ajout des features réussi avec succée
+2026-04-14 16:14:17 | INFO | src.analysis.analysis_category:13 | Début de l'analyse par catégorie
+2026-04-14 16:14:17 | INFO | src.analysis.analysis_category:31 | Analyse par catégorie réussi avec succée
+2026-04-14 16:14:17 | INFO | src.analysis.analyses_city:13 | Début de l'analyse par région
+2026-04-14 16:14:17 | INFO | src.analysis.analyses_city:30 | Analyse par région réussi avec succée
+2026-04-14 16:14:17 | INFO | src.analysis.analysis_status:13 | Début de l'analyse par statut
+2026-04-14 16:14:17 | INFO | src.analysis.analysis_status:30 | Analyse par statut réussi avec succée
+2026-04-14 16:14:17 | INFO | src.report:14 | Début de la génération du fichier Excel multi-onglets
+2026-04-14 16:14:17 | INFO | src.report:49 | Début de la génération du feuille Données Brutes
+2026-04-14 16:14:17 | INFO | src.report:53 | Application du formatage de l'entete sur la feuille Données Brutes
+2026-04-14 16:14:17 | INFO | src.report:55 | Fixation de l'entete sur la feuille Données Brutes
+2026-04-14 16:14:17 | INFO | src.report:57 | Application de l'auto_filter sur la feuille Données Brutes
+2026-04-14 16:14:17 | INFO | src.report:49 | Début de la génération du feuille Données Néttoyées au Complet
+2026-04-14 16:14:17 | INFO | src.report:53 | Application du formatage de l'entete sur la feuille Données Néttoyées au Complet
+2026-04-14 16:14:17 | INFO | src.report:55 | Fixation de l'entete sur la feuille Données Néttoyées au Complet
+2026-04-14 16:14:17 | INFO | src.report:57 | Application de l'auto_filter sur la feuille Données Néttoyées au Complet
+2026-04-14 16:14:17 | INFO | src.report:49 | Début de la génération du feuille Données Par Catégories
+2026-04-14 16:14:17 | INFO | src.report:53 | Application du formatage de l'entete sur la feuille Données Par Catégories
+2026-04-14 16:14:17 | INFO | src.report:55 | Fixation de l'entete sur la feuille Données Par Catégories
+2026-04-14 16:14:17 | INFO | src.report:57 | Application de l'auto_filter sur la feuille Données Par Catégories
+2026-04-14 16:14:17 | INFO | src.report:98 | Début de la création du graphique pour la feuille Données Par Catégories
+2026-04-14 16:14:17 | INFO | src.report:124 | Graphique crée avec succée pour la feuille Données Par Catégories
+2026-04-14 16:14:17 | INFO | src.report:49 | Début de la génération du feuille Données Par City
+2026-04-14 16:14:17 | INFO | src.report:53 | Application du formatage de l'entete sur la feuille Données Par City
+2026-04-14 16:14:17 | INFO | src.report:55 | Fixation de l'entete sur la feuille Données Par City
+2026-04-14 16:14:17 | INFO | src.report:57 | Application de l'auto_filter sur la feuille Données Par City
+2026-04-14 16:14:17 | INFO | src.report:167 | Début de la création du graphique pour la feuille Données Par City
+2026-04-14 16:14:17 | INFO | src.report:183 | Graphique crée avec succée pour la feuille Données Par City
+2026-04-14 16:14:17 | INFO | src.report:49 | Début de la génération du feuille Données Par Status
+2026-04-14 16:14:17 | INFO | src.report:53 | Application du formatage de l'entete sur la feuille Données Par Status
+2026-04-14 16:14:17 | INFO | src.report:55 | Fixation de l'entete sur la feuille Données Par Status
+2026-04-14 16:14:17 | INFO | src.report:57 | Application de l'auto_filter sur la feuille Données Par Status
+2026-04-14 16:14:17 | INFO | src.report:128 | Début de la création du graphique pour la feuille Données Par Status
+2026-04-14 16:14:17 | INFO | src.report:163 | Graphique crée avec succée pour la feuille Données Par Status
+2026-04-14 16:14:17 | SUCCESS | src.report:185 | Feuille Excel de Repporting Données Par Status crée avec succée
+2026-04-14 16:14:18 | SUCCESS | src.report:187 | Fichier Excel de Repporting donnée_vente_E-commerce_14-04-2026_16-14.xlsx a étais crée avec succée
